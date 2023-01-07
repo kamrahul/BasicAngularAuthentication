@@ -1,0 +1,18 @@
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+    <form [formGroup]="loginForm" (ngSubmit)="loginAction()">
+
+        <label for="user-name">Email address: </label>
+        <input id="user-name" type="text" formControlName="userName">
+      
+        <label for="password"> Password: </label>
+        <input id="password" type="text" formControlName="password">
+
+        <p>Complete the form to enable button. {{loginForm.valid}}</p>
+<button type="submit" [disabled]="!loginForm.valid">Login</button>
+      
+      </form>
+</div>
